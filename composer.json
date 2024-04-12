@@ -1,0 +1,10 @@
+{
+    "require": {
+        "a1phanumeric/php-mysql-class": "^2.1"
+    },
+    "config": {
+        "vendor-dir": "src/vendor",
+        "bin-dir": "src/vendor/bin",
+        "sort-packages": true
+    }
+}
