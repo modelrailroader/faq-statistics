@@ -17,8 +17,11 @@
         </div>
     </div>
     <div class="row mt-4">
-        <div class="col-md-6">
-            <canvas id="views"></canvas>
+        <div class="col-md-6 mt-4">
+            <canvas height="400" id="doughnutchart"></canvas>
+        </div>
+        <div class="col-md-6 mt-4">
+            <canvas height="400" id="barchart"></canvas>
         </div>
     </div>
 </div>
@@ -44,8 +47,21 @@
     dataFetch.then(data => {
         const views = data['views'];
         const descriptions = data['descriptions'];
-        const ctx = document.getElementById('views').getContext('2d');
-        const myChart = new Chart(ctx, {
+        const doughnutChart = new Chart(document.getElementById('doughnutchart').getContext('2d'), {
+            type: 'doughnut',
+            data: {
+                labels: descriptions,
+                datasets: [{
+                    label: 'Abrufzahl',
+                    data: views
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+        const barchart = new Chart(document.getElementById('barchart').getContext('2d'), {
             type: 'bar',
             data: {
                 labels: descriptions,
@@ -60,7 +76,8 @@
                     y: {
                         beginAtZero: true
                     }
-                }
+                },
+                maintainAspectRatio: false
             }
         });
     }).catch(error => {
