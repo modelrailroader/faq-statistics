@@ -1,4 +1,4 @@
 .idea
-.htpasswd
+src/.htpasswd
 src/constants.php
 src/vendor/*
