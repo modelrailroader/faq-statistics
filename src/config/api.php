@@ -6,8 +6,6 @@ use A1phanumeric\DBPDO;
 
 $dbclient = new DBPDO($dbhost, $dbname, $dbuser, $dbpassword);
 
-$action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_SPECIAL_CHARS);
-
 $data = $dbclient->fetchAll("SELECT description, views FROM statistics");
 $descriptions = [];
 $views = [];
