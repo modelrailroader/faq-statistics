@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Passwort notwendig"
-AuthUserFile C:\xampp\htdocs\faq-statistics\src\.htpasswd
-Require valid-user
