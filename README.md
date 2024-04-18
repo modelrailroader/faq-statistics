@@ -4,19 +4,21 @@ Dies ist ein kleines PHP-Skript, mit dessen Hilfe die Nützlichkeit verschiedene
 
 ## Deployment
 
-Die Applikation kann mittels composer installiert werden. Lediglich der "src"-Ordner muss auf den Webserver geladen werden.
+Die Applikation kann von GitHub geklont und mittels composer installiert werden. Lediglich der "src"-Ordner muss auf den Webserver geladen werden.
 
 ````
+git clone https://github.com/modelrailroader/faq-statistics
+cd faq-statistics
 composer install
 ````
 
+Zusätzlich ist auch die manuelle Konfiguration der MySQL-Datenbank durchzuführen (s. Abschnitt "Datenbank").
+
 ## Verwendung
 
-Mit dem GET-Parameter "source" können beliebig viele Quellen definiert werden, die vorher in der Datenbank hinterlegt werden müssen. Mittels dieser Variablen ist eine Unterscheidung zwischen den verschiedenen Links möglich. 
+Mit dem GET-Parameter "source" können beliebig viele Quellen definiert werden, die vorher in der Datenbank hinterlegt werden müssen (s. unten). Mittels dieser Variablen ist eine Unterscheidung zwischen den verschiedenen Links möglich. 
 
 Beispiel: Es sollen zwei Links evaluiert werden, einer auf der Website, einer auf IServ. Auf der Website wird der Link "[URL]?source=website", auf IServ der Link "[URL]?source=iserv" hinterlegt. Beide Links leiten umgehend auf das normale iPad-FAQ; zählen jedoch auch die Aufrufe.
-
-Die Ergebnisse können nach Eingabe eines Passwords, das in der .htpasswd-Datei in Hash-Form (Erstellung mit geeignetem Generator, [Beispiel](https://www.entwicklertools.de/tools/htaccess/htpasswd-generator/?tx_naderiostools_htpasswdgen%5Baction%5D=generator&tx_naderiostools_htpasswdgen%5Bcontroller%5D=Htpasswd&cHash=5f8e55738ba53e0fefa5d7455848b01a)) hinterlegt ist, unter dem Link "[URL]/config" abgerufen werden.
 
 ## Datenbank
 
@@ -26,7 +28,7 @@ Es ist eine eigene Tabelle namens "statistics" erforderlich. Diese beinhaltet dr
 - description (VARCHAR): Diese wird als lesbarer Name in den Ergebnissen angezeigt.
 - views (INT): Hier werden die Aufrufe gespeichert.
 
-Diese Tabelle muss vorher manuell erstellt werden. Die Datenbank-Zugangsdaten sind in der constants.php zu hinterlegen.
+Diese Tabelle muss vorher manuell erstellt werden. Die Datenbank-Zugangsdaten sind in der constants.original.php zu hinterlegen. Außerdem muss diese Datei in constants.php umbenannt werden.
 
 Zum Hinzufügen eines neuen Links muss ein neuer Eintrag in dieser Tabelle mit views=0 hinzugefügt werden.
 
