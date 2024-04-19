@@ -8,7 +8,11 @@ $dbclient = new DBPDO($dbhost, $dbname, $dbuser, $dbpassword);
 
 $source = filter_input(INPUT_GET, 'source', FILTER_SANITIZE_SPECIAL_CHARS);
 
-$names = $dbclient->fetch("SELECT name FROM statistics");
+$names = [];
+$names_query = $dbclient->fetchAll("SELECT name FROM statistics");
+foreach ($names_query as $item) {
+    $names[] = $item['name'];
+}
 
 if (in_array($source, $names)) {
     $query = sprintf(
