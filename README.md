@@ -32,6 +32,6 @@ Diese Tabelle muss vorher manuell erstellt werden. Die Datenbank-Zugangsdaten si
 
 Zum Hinzufügen eines neuen Links muss ein neuer Eintrag in dieser Tabelle mit views=0 hinzugefügt werden.
 
-Copyright by Jan Harms © 2024
+Copyright by Jan Harms © 2025
 
 Lizenz: Mozilla Public License 2.0 (MPL 2.0) - s. LICENSE-Datei
