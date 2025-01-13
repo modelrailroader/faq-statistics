@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "a1phanumeric/php-mysql-class",
-            "version": "2.1",
+            "version": "2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/a1phanumeric/PHP-MySQL-Class.git",
-                "reference": "9c189d039a68211828100bcd592fc09cb057df86"
+                "reference": "d94dea03c79d902f29d2ca08fdef13bfc8d8e07b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/a1phanumeric/PHP-MySQL-Class/zipball/9c189d039a68211828100bcd592fc09cb057df86",
-                "reference": "9c189d039a68211828100bcd592fc09cb057df86",
+                "url": "https://api.github.com/repos/a1phanumeric/PHP-MySQL-Class/zipball/d94dea03c79d902f29d2ca08fdef13bfc8d8e07b",
+                "reference": "d94dea03c79d902f29d2ca08fdef13bfc8d8e07b",
                 "shasum": ""
             },
             "type": "library",
@@ -39,9 +39,9 @@
             "description": "This is a simple to use PHP MySQL class that easily bolts on to any existing PHP application, streamlining your MySQL interactions.",
             "support": {
                 "issues": "https://github.com/a1phanumeric/PHP-MySQL-Class/issues",
-                "source": "https://github.com/a1phanumeric/PHP-MySQL-Class/tree/2.1"
+                "source": "https://github.com/a1phanumeric/PHP-MySQL-Class/tree/2.3"
             },
-            "time": "2023-11-29T11:01:21+00:00"
+            "time": "2025-01-07T09:38:09+00:00"
         }
     ],
     "packages-dev": [],
