@@ -1,6 +1,6 @@
 {
     "require": {
-        "a1phanumeric/php-mysql-class": "^2.1"
+        "a1phanumeric/php-mysql-class": "^3.0"
     },
     "config": {
         "vendor-dir": "src/vendor",
